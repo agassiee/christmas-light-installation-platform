@@ -69,7 +69,7 @@ describe('Photos API', () => {
     await prisma.jobAssignment.create({
       data: {
         jobId,
-        workerId,
+        workerId: workerProfile.id,
         isLead: true,
       },
     });
